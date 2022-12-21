@@ -66,16 +66,6 @@ const Search = () => {
   const pageHandler = (page: number) => {
     setQuery({ ...query, page: page });
   };
-  const nextPage = () => {
-    if (query.page !== undefined && query.page !== news?.totalResults) {
-      setQuery({ ...query, page: query.page + 1 });
-    }
-  };
-  const previosPage = () => {
-    if (query.page !== undefined && query.page !== 1) {
-      setQuery({ ...query, page: query.page - 1 });
-    }
-  };
 
   const { optionsArray: searchIn } = useConvertToOptionsArray(SEARCH_IN);
   const { optionsArray: orderBy } = useConvertToOptionsArray(ORDER_BY);
@@ -115,26 +105,7 @@ const Search = () => {
           </div>
         }
       />
-      <div className={s.pag_with_pages}>
         <Pagination totalPages={totalPagesArray} onClick={pageHandler} />
-      </div>
-      <div className={s.pag_without_pages}>
-        <div
-          className={query.page === 1 ? s.button_disabled : s.button}
-          onClick={() => previosPage()}
-        >
-          <ChevronLeftIcon />
-        </div>
-        <div className={s.current_page}>{query.page}</div>
-        <div
-          className={
-            query.page === news?.totalResults ? s.button_disabled : s.button
-          }
-          onClick={() => nextPage()}
-        >
-          <ChevronRightIcon />
-        </div>
-      </div>
     </div>
   );
 };

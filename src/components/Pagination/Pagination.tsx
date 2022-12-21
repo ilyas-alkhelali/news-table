@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import PageItem from "../PageItem/PageItem";
 import s from "./Pagination.module.scss";
-
+import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 interface PaginationProps {
   totalPages: number[];
   onClick: (page: number) => void;
@@ -27,6 +28,19 @@ const Pagination: React.FC<PaginationProps> = ({ totalPages, onClick }) => {
       setPages(pages);
     }
   }, [page]);
+  const nextPage = () => {
+    if (page !== undefined && page !== totalPages.length) {
+      window.scrollTo(0,0)
+      setPage(page + 1);
+      onClick(page + 1);
+    }
+  };
+  const previosPage = () => {
+    if (page !== undefined && page !== 1) {
+      setPage(page - 1);
+      onClick(page - 1);
+    }
+  };
   return (
     <div>
       {totalPages.length > 9 ? (
@@ -62,6 +76,21 @@ const Pagination: React.FC<PaginationProps> = ({ totalPages, onClick }) => {
           ))}
         </div>
       )}
+      <div className={s.pag_without_pages}>
+        <div
+          className={page === 1 ? s.button_disabled : s.button}
+          onClick={() => previosPage()}
+        >
+          <ChevronLeftIcon />
+        </div>
+        <div className={s.current_page}>{page}</div>
+        <div
+          className={page === totalPages.length ? s.button_disabled : s.button}
+          onClick={() => nextPage()}
+        >
+          <ChevronRightIcon />
+        </div>
+      </div>
     </div>
   );
 };

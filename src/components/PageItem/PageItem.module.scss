@@ -1,15 +1,22 @@
 .item {
-  padding: 10px 20px;
-  background: rgba(0, 0, 0, 0.2);
-  margin: 0px 10px;
-  box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.6);
+  padding: 10px 15px;
+  margin: 0px 5px;
+  background: rgb(252, 250, 250);
+  color: rgb(3, 3, 3);
   border-radius: 50%;
+  border: 3px solid rgb(4, 4, 4);
+  transition: 0.5s;
+  &:hover {
+    background: rgb(122, 122, 122);
+    color: rgb(3, 3, 3);
+  }
 }
 .item_chosen {
-  padding: 10px 20px;
+  padding: 10px 15px;
+  margin: 0px 5px;
   background: black;
-  margin: 0px 10px;
-  box-shadow: 0px 0px 10px 10px rgba(125, 120, 120, 0.6);
-  border-radius: 50%;
   color: white;
+  border-radius: 50%;
+  border: 3px solid rgb(4, 4, 4);
+  transition: 0.5s;
 }
