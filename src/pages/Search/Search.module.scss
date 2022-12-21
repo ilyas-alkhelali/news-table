@@ -1,0 +1,83 @@
+@import "./../../styleLayouts/toolBar.scss";
+.query_creator {
+}
+.pag_with_pages{
+}
+.change_z_index{
+  position: relative;
+  z-index: 9;
+}
+.query_creator_content {
+  display: flex;
+  justify-content: space-around;
+  margin: 70px 0px 0px 0px;
+  @extend %toolbar-block;
+}
+.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 100px 0px;
+  font-size: 50px;
+}
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 100px 0px;
+}
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pag_without_pages{
+  display: none;
+}
+.button {
+  padding: 10px;
+  background: rgb(252, 250, 250);
+  color: rgb(3, 3, 3);
+  border-radius: 50%;
+  border: 3px solid rgb(4, 4, 4);
+  transition: 0.5s;
+  &:hover {
+    background: black;
+    color: white;
+  }
+}
+.button_disabled {
+  border-radius: 50%;
+  padding: 10px;
+  background: rgb(252, 250, 250);
+  color: rgba(90, 89, 89, 0.3);
+  border: 3px solid rgba(90, 89, 89, 0.3);
+}
+.current_page {
+  font-size: 25px;
+  text-shadow: -1px 4px 10px rgba(30, 30, 30, 0.4);
+}
+@media (max-width: 875px) {
+  .query_creator_content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+  }
+  .query_creator {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media (max-width: 485px) {
+  .query_creator_content {
+    width: 100%;
+  }
+  .pag_without_pages{
+    margin: 30px 0px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}

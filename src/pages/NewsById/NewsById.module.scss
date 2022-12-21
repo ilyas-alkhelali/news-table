@@ -1,0 +1,49 @@
+.container {
+  margin: 30px 0px 0px 0px;
+  padding: 74px 0px 0px 0px;
+  border-top: 2px solid red;
+}
+.title {
+  font-family: "Inter";
+  font-style: italic;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 61px;
+}
+.image_block {
+  margin: 50px 0px 0px 0px;
+}
+.image {
+  width: 100%;
+}
+.subtitle {
+  margin: 54px 0px 0px 0px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.author {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+}
+.date {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+}
+.text_block {
+  margin: 50px 0px 100px 0px;
+}
+.text {
+  font-family: "Inter";
+  font-style: italic;
+  font-weight: 200;
+  font-size: 30px;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+}
+.link {
+}

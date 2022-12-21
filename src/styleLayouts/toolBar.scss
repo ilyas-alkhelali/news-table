@@ -1,0 +1,12 @@
+%toolbar-block {
+  background: #000000;
+  box-shadow: 9px 9px 15px rgba(0, 0, 0, 0.15);
+  color: white;
+  width: 100%;
+  padding: 37px 0px;
+}
+@media (max-width: 654px) {
+  %toolbar-block {
+    width: 60%;
+  }
+}

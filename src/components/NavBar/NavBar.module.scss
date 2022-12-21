@@ -1,0 +1,72 @@
+@import "./../../styleLayouts/toolBar.scss";
+
+.navbar_container {
+}
+.navbar_content {
+  @extend %toolbar-block;
+  display: flex;
+  justify-content: space-between;
+  margin: 70px 0px 0px 0px;
+}
+.navbar_list {
+  display: flex;
+  justify-content: space-between;
+}
+.list_item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 0px 0px 30px;
+  transition: 0.5s;
+  p:hover {
+    color: rgb(250, 106, 106);
+  }
+}
+.chosen_list_item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: red;
+  padding: 0px 0px 0px 30px;
+}
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 60px 0px 0px;
+}
+.select_list {
+  display: none;
+}
+@media (max-width: 1200px) {
+  .select_list {
+    display: block;
+    position: relative;
+    z-index: 9;
+  }
+  .navbar_list {
+    display: none;
+  }
+  .navbar_content {
+    justify-content: space-around;
+  }
+  .icon {
+    padding: 0px;
+  }
+}
+@media (max-width: 654px) {
+  .navbar_content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .navbar_container {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media (max-width: 486px) {
+  .navbar_content {
+    width: 100%;
+  }
+}
